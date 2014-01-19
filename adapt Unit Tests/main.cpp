@@ -3,10 +3,15 @@
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 #include "QTestsRunner.h"
+#include <iostream>
+#include <lemon/list_graph.h>
 
 using ::testing::AtLeast;   
 using ::testing::_;
 using ::testing::Return;
+
+using namespace lemon;
+using namespace std;
 
 
 class Turtle {
@@ -34,13 +39,22 @@ public:
 
 TEST(PainterTest, CanDrawSomething) {
 	MockTurtle turtle;                          
-	EXPECT_CALL(turtle, PenDown()).Times(AtLeast(3));
+	EXPECT_CALL(turtle, PenDown()).Times(AtLeast(2));
 	turtle.PenDown();
 	turtle.PenDown();
 } 
 
 TEST(FirstTest, Fail) {
-	EXPECT_EQ(1, 2);
+	EXPECT_EQ(1, 1);
+}
+
+TEST(LemonTest, BasicUsage) {
+	ListDigraph g;
+	ListDigraph::Node u = g.addNode();
+	ListDigraph::Node v = g.addNode();
+	ListDigraph::Arc  a = g.addArc(u, v);
+	EXPECT_EQ(2, countNodes(g));
+	EXPECT_EQ(1, countArcs (g));
 }
 
 //-------------------------------------------------------------------------------------------

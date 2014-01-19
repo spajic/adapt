@@ -60,20 +60,20 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Work\CPP\libs\lemon-1.3\;C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Work\CPP\libs\gmock-1.7.0\msvc\2010\x64\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Work\CPP\libs\lemon-1.3;C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Work\CPP\libs\lemon-1.3\build\lemon\Debug;C:\Work\CPP\libs\gmock-1.7.0\msvc\2010\x64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Work\CPP\libs\lemon-1.3\;C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Work\CPP\libs\lemon-1.3\;C:\Work\CPP\libs\gmock-1.7.0\gtest\include;C:\Work\CPP\libs\gmock-1.7.0\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -106,7 +106,7 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>gmock.lib;qtmaind.lib;Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>lemon.lib;gmock.lib;qtmaind.lib;Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
